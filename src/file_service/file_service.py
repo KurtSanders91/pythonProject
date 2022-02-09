@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 import argparse
+import os.path
+
 
 def read_file():
     filename = input("Enter file name : ")
@@ -24,6 +26,17 @@ def list_dir():
     pass
     # Print content of current working directory
 
+def get_file_meta_data(filename):
+    """
+    Read file creation date, edit date, filesize
+
+    :param filename: filename to read
+    :return: tuple (create_date, modification_date, filesize)
+    :raises Exception if file not found
+    """
+    #os.path.getctime - create file time
+    #os.path.getmtime - modify file time
+    #os.path.getsize()
 
 def change_dir():
     directory = input("Enter dir name : ")
